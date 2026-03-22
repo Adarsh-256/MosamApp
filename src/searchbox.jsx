@@ -51,16 +51,16 @@ export default function SearchBox({ updateInfo }) {
   return (
     <div style={{ textAlign: "center" }}>
 
-      <form
-        onSubmit={handleSubmit}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "12px",
-          marginTop: "40px",
-        }}
-      >
+     <form
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "10px",
+    marginTop: "30px"
+  }}
+  onSubmit={handleSubmit}
+>
         <TextField
           label="Search City..."
           variant="outlined"
@@ -70,8 +70,9 @@ export default function SearchBox({ updateInfo }) {
           sx={{
             background: "rgba(255,255,255,0.9)",
             borderRadius: "12px",
-            width: "260px",
+            width: "clamp(200px, 60vw, 300px)",
             backdropFilter: "blur(10px)",
+            
           }}
         />
 
